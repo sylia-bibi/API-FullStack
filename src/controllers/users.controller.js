@@ -144,4 +144,14 @@ exports.getMe = (req, res) => {
     });
 };
 
+exports.getUsers = (req, res) => {
+  User.find().
+ then(data => {
+     res.send(data)
+ }).catch(err => {
+     console.log(err);
+     
+ });
+}
+
 
